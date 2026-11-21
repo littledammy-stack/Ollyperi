@@ -1,0 +1,19 @@
+OLLYPERI SITE - READ ME FIRST
+
+This folder IS your website. Do not open the files one by one.
+
+TO PUT IT ONLINE (free):
+1. Go to app.netlify.com/drop and sign in (so the site is yours and does not expire).
+2. Drag this whole folder (or the zip file) onto the page.
+3. Netlify gives you a link ending in netlify.app. That is your site.
+
+BEFORE IT WORKS FOR REAL, you need the Supabase setup (Claude walks you through it):
+- schema.sql  = paste into Supabase "SQL Editor" and click Run (once).
+- config.js   = holds your Supabase Project URL and Publishable key.
+- Supabase > Authentication > URL Configuration: set Site URL to your netlify.app link.
+
+AFTER IT IS ONLINE:
+- Create your own account on the site, then make it admin (Claude gives you the one line).
+- Log in > Admin > Products: add products and upload photos.
+
+Do not share your Supabase "secret" or "service_role" key with anyone. The Publishable key is safe.
