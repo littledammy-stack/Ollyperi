@@ -62,7 +62,7 @@ function addToCart(id, opt, qty) { const c = cart(); const l = c.find(x => x.id 
 const NAV = [['shop', 'Shop all']].concat(Object.keys(CATS).map(k => [k, CATS[k].nav]));
 const navItems = () => NAV.concat(P.some(p => p.active && p.compare > 0) ? [['deals', 'Deals']] : []);
 const route = () => (location.hash.slice(1) || 'home').toLowerCase();
-const TITLES = {home: 'Ollyperi', deals: 'Deals | Ollyperi', shop: 'Shop all | Ollyperi', account: 'My account | Ollyperi', checkout: 'Checkout | Ollyperi', done: 'Order | Ollyperi', admin: 'Admin | Ollyperi', reset: 'Reset password | Ollyperi', delivery: 'Delivery and returns | Ollyperi', privacy: 'Privacy | Ollyperi'};
+const TITLES = {home: 'Ollyperi | Gadgets, Footwear, Clothing & Appliances in Nigeria', deals: 'Deals | Ollyperi', shop: 'Shop all | Ollyperi', account: 'My account | Ollyperi', checkout: 'Checkout | Ollyperi', done: 'Order | Ollyperi', admin: 'Admin | Ollyperi', reset: 'Reset password | Ollyperi', delivery: 'Delivery and returns | Ollyperi', privacy: 'Privacy | Ollyperi'};
 const IC = {
   shop: '<rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/>',
   gadgets: '<rect x="7" y="2.5" width="10" height="19" rx="2.2"/><path d="M11 18.5h2"/>',
@@ -89,7 +89,7 @@ function updateHeader() {
   $('#acctLabel').textContent = u ? 'Hi, ' + first(u.name) : 'Account';
   $('#acctMenu').innerHTML = acctMenuHTML();
   $('#demoBar').hidden = api.live;
-  document.title = CATS[r] ? CATS[r].name + ' | Ollyperi' : (TITLES[r] || (r.startsWith('item-') && byId(r.slice(5)) ? byId(r.slice(5)).name + ' | Ollyperi' : 'Ollyperi'));
+  document.title = CATS[r] ? CATS[r].name + ' | Ollyperi' : (TITLES[r] || (r.startsWith('item-') && byId(r.slice(5)) ? byId(r.slice(5)).name + ' | Ollyperi' : TITLES.home));
 }
 
 /* ---------- storefront views ---------- */

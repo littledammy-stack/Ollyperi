@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /schema.sql
+Disallow: /update-v4.sql
+
+Sitemap: https://ollyperi.netlify.app/sitemap.xml
